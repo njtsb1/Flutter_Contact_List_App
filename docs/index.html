@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact List</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <h1 id="app-title">Contact List</h1>
+
+      <div class="controls" role="group" aria-label="App controls">
+        <label class="lang-select" for="lang">
+          <span class="visually-hidden">Language</span>
+          <select id="lang" aria-label="Select language">
+            <option value="en-US">English</option>
+            <option value="pt-BR">Português (BR)</option>
+            <option value="es-ES">Español</option>
+          </select>
+        </label>
+
+        <button id="theme-toggle" class="icon-btn" aria-pressed="true" aria-label="Toggle dark mode">
+          <!-- Moon / Sun icons are injected by CSS/JS for accessibility -->
+          <span id="theme-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section aria-labelledby="form-title" class="card form-card">
+      <h2 id="form-title">Add Contact</h2>
+
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <label for="name" id="label-name">Name</label>
+          <input id="name" name="name" type="text" inputmode="text" required aria-required="true" />
+        </div>
+
+        <div class="form-row">
+          <label for="phone" id="label-phone">Phone</label>
+          <input id="phone" name="phone" type="tel" inputmode="tel" pattern="[\d+\-\s()]{3,}" />
+        </div>
+
+        <div class="form-row">
+          <label for="photo" id="label-photo">Profile Photo</label>
+          <input id="photo" name="photo" type="file" accept="image/*" aria-describedby="photo-help" />
+          <small id="photo-help" class="muted">Optional. Image will be stored locally in your browser.</small>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="save-btn" class="primary">Save</button>
+          <button type="reset" id="reset-btn" class="secondary">Reset</button>
+        </div>
+      </form>
+
+      <div id="form-feedback" class="feedback" role="status" aria-live="polite"></div>
+    </section>
+
+    <section aria-labelledby="list-title" class="card list-card">
+      <h2 id="list-title">Contacts</h2>
+
+      <div class="list-controls">
+        <input id="search" type="search" placeholder="Search by name or phone" aria-label="Search contacts" />
+        <button id="clear-all" class="danger" aria-label="Delete all contacts">Clear All</button>
+      </div>
+
+      <ul id="contacts" class="contact-list" aria-live="polite"></ul>
+
+      <div id="empty-state" class="empty muted">No contacts yet. Add one using the form.</div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <small id="footer-text">Developed by Nivaldo Beirão</small>
+    </div>
+  </footer>
+
+  <script src="./src/script.js" defer></script>
+</body>
+</html>
