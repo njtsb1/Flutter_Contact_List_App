@@ -1,0 +1,22 @@
+# Node / web
+node_modules/
+dist/
+.DS_Store
+.env
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+desktop.ini
+
+# Editor
+*.log
+
+# Build artifacts
+/build/
+/out/
+
+# Local dev files
+*.local
+
