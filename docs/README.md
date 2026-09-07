@@ -28,7 +28,7 @@ The goal of the challenge is to leverage external packages to enhance Flutter ap
 - **Dart (Flutter)**: build the mobile application UI, manage state, and integrate with Back4App for data persistence.
 - **AI (Assistive)**: provide development assistance, intelligent suggestions, and accessibility improvements during the project.
 
-## Tecnologies add
+## Additional technologies
 
 - **HTML**: main markup (semantic and accessible)
 - **CSS**: theme variables, responsive layout, focus states
