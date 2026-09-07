@@ -2,7 +2,7 @@
 
 Project developed at Santander Bootcamp 2023 - Mobile with Flutter, under the guidance of specialist [Danilo Perez](https://github.com/perez-danilo "Danilo Perez").
 
-The goal of the challenge is to leverage external packages to enhance Flutter applications by building a contact list app that displays contact information - ncluding photos - in a list format.
+The goal of the challenge is to leverage external packages to enhance Flutter applications by building a contact list app that displays contact information - including photos - in a list format.
 
 **Challenge Checklist**:
 
