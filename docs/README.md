@@ -1,69 +1,64 @@
 # Creating a Flutter Contact List App
 
-Project developed at Santander Bootcamp 2023 - Mobile with Flutter, under the guidance of specialist [Danilo Perez](https://github.com/perez-danilo "Danilo Perez").
+Project developed during the Santander Bootcamp 2023 - Mobile with Flutter, under the guidance of [Danilo Perez](https://github.com).
 
-The goal of the challenge is to leverage external packages to enhance Flutter applications by building a contact list app that displays contact information - including photos - in a list format.
+This project implements a contact list application that serves as a web prototype/container designed to simulate and map the requirements of a Flutter mobile application integrated with Back4App.
 
-**Challenge Checklist**:
+## Challenge Checklist
 
-- Create a Flutter application.
-- Create a database / Back4App.
-- Implement user registration with a profile photo.
-- Save only the image path to the database.
+- Create a Flutter application layout / workflow.
+- Structure database modeling (Back4App architecture).
+- Implement contact registration with a profile photo.
+- Save image paths/references for optimized data transfer.
 - Display a list of people with their respective photos.
-- Use other components learned.
 
 ## Features
 
-- **Dark-first theme** with toggle (moon / sun icon)
-- **Multilanguage UI**: `en-US` (default), `pt-BR`, `es-ES`
-- **Add contact** with name, phone, and optional profile photo (stored as Data URL)
-- **Search** contacts by name or phone
-- **Delete single contact** or **clear all**
-- **Semantic HTML** and ARIA attributes for accessibility
-- **Responsive layout** for desktop, tablet, and mobile
+- **Multi-language UI**: Support for English (en-US), Portuguese (pt-BR), and Spanish (es-ES) with runtime switching.
+- **Dark-First Theme**: Modern dark theme by default with a quick toggle (moon/sun icon).
+- **Contact Management**: Add contacts with names, phones, and profile photos (stored as Data URLs), with single delete or clear-all options.
+- **Search Filter**: Real-time filtering by name or phone number.
+- **Accessibility**: Semantic layout, ARIA attributes, keyboard navigation, and live region feedback.
+- **Responsive Layout**: Fluid UI optimized for mobile viewports, tablets, and desktop.
 
-## Tecnologies used
+## Tech Stack
 
-- **Dart (Flutter)**: build the mobile application UI, manage state, and integrate with Back4App for data persistence.
-- **AI (Assistive)**: provide development assistance, intelligent suggestions, and accessibility improvements during the project.
+### Core Architecture
+- **Dart / Flutter (Concept)**: UI workflow modeling, state management logic, and Back4App database design.
+- **AI Assistive Tech**: Simulated assistance for smart contextual suggestions and accessibility UX improvements.
 
-## Additional technologies
+### Web Delivery & Mock Interface
+- **HTML5**: Semantic markup, accessible controls, and ARIA integration.
+- **CSS3**: Core variables for dark/light themes, responsive layout, and focus states.
+- **JavaScript**: Core logic for contact filtering, i18n translation engine, and local state management.
 
-- **HTML**: main markup (semantic and accessible)
-- **CSS**: theme variables, responsive layout, focus states
-- **JavaScript**: logic for contacts, i18n, theme, and storage
+## How to Run
 
-## How to run
-
-1. Open `index.html` in your browser (no server required).
-2. For development, you can use a simple static server (optional):
+1. Open `index.html` directly in any modern browser.
+2. *(Optional)* For a better development experience, spin up a local static server:
 
 ```bash
-# using Python 3
+# Using Python 3
 python -m http.server 8000
-# then open http://localhost:8000
+# Then navigate to http://localhost:8000
 ```
 
-![Contact List](assets/Contact_List.png)
+## Data Persistence & Notes
 
-## Accessibility notes
+- **Storage**: Contacts and profile images (as Data URLs) are saved locally in `localStorage` under the key `contacts_v1` for demo purposes.
+- **Production Scaling**: In a production environment, local storage should be replaced by remote cloud storage (like Back4App/Parse Server) to handle cross-device synchronization and large image assets.
 
-- All interactive controls have keyboard focus styles.
-- Form fields include labels and ``aria-*`` attributes where appropriate.
-- Live regions (``aria-live``) announce feedback and list updates to assistive technologies.
-- Color contrast is considered for dark-first design; test with your target audience and tools.
+## Accessibility Details
 
-## Data persistence
+- Visible focus outlines on all interactive elements for keyboard-only navigation.
+- `aria-live` regions to announce dynamic list updates and feedback to screen readers.
 
-Contacts are saved in ``localStorage`` under the key ``contacts_v1``. Images are stored as Data URLs in the same storage. This is convenient for a demo but not suitable for large-scale or cross-device sync.
+## Future Improvements
 
-## Improvements you can add
+- Connect the interface to a live Back4App/Parse Server backend.
+- Add contact editing functionality and input field validation.
+- Implement virtualized lists or pagination for handling large datasets.
 
-- Upload images to a remote storage and save URLs for cross-device access.
-- Add edit contact functionality and validation improvements.
-- Add pagination or virtualized list for large contact sets.
-- Add export/import (JSON) for backup and restore.
-- Add unit tests and automated accessibility checks.
+![Contact List Preview](assets/Contact_List.png)
 
 [LICENSE](./LICENSE)
